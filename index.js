@@ -85,6 +85,9 @@ app.delete("/todo", async function (req, res) {
   const message = await removeToDo(req.body._id);
   res.send(message);
 });
+app.get("/", async function (req, res) {
+  res.send("it is working");
+});
 
 app.listen(3001, () => {
   console.log("server was started!");
